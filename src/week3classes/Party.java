@@ -37,5 +37,8 @@ public class Party {
         p.winBattle(20);
         p.addMember(c2);
         System.out.println(p);
+        Character c3=new Character();
+        Character c4=new Character();
+        System.out.println(c3==c4);
     }
 }
