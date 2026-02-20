@@ -8,6 +8,15 @@ public class LLN<T> {
         this.data=val;
         this.next=next;
     }
+    public T getData(){
+        return this.data;
+    }
+    public LLN getNext(){
+        return this.next;
+    }
+    public void setNext(LLN<T> node){
+        this.next=node;
+    }
     public String toString2(){
         LLN current=this;
         String out="";
