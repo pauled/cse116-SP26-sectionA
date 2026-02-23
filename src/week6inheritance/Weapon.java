@@ -1,0 +1,21 @@
+package week6inheritance;
+
+import week3classes.Player;
+
+public class Weapon extends GameItem{
+    private int damage;
+
+    public Weapon(double x,double y,int damage){
+        super(x,y);
+        this.damage=damage;
+    }
+    public String toString(){
+        String out=super.toString();
+        out+=" damage:"+this.damage;
+        return out;
+    }
+
+    public void use(Player player){
+        player.takeDamage(this.damage);
+    }
+}
