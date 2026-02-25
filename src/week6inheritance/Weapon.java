@@ -1,6 +1,5 @@
 package week6inheritance;
 
-import week3classes.Player;
 
 public class Weapon extends GameItem{
     private int damage;

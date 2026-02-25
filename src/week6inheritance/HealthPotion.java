@@ -1,6 +1,6 @@
 package week6inheritance;
 
-import week3classes.Player;
+
 
 public class HealthPotion extends GameItem{
     private int increase;
