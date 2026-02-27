@@ -2,7 +2,7 @@ package week6inheritance;
 
 
 
-public class HealthPotion extends GameItem{
+public class HealthPotion extends Location implements Usable{
     private int increase;
 
     public HealthPotion(int increase, double x,double y){
@@ -13,6 +13,7 @@ public class HealthPotion extends GameItem{
     public void use(Player player){
         player.takeDamage(-this.increase);
     }
+    public void useless(){}
     public String toString(){
         String out=super.toString();
         out+="increase: "+this.increase;
