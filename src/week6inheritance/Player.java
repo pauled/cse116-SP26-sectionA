@@ -35,6 +35,14 @@ public class Player extends Location{
         return out;
     }
 
+    public int getMaxHP() {
+        return maxHP;
+    }
+
+    public int getDamageDealt() {
+        return damageDealt;
+    }
+
     public static void main(String[] args) {
         Player p1=new Player(10);
         Player p2=new Player(9);
