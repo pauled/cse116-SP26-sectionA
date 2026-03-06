@@ -56,5 +56,7 @@ public class Player extends Location {
         System.out.println(p2);
         Player p3=p2;
         p1.attack(p2);
+        p1.pickup(new HealthPotion(1,2,3));
+        p1.useItem(0,p2);
     }
 }
