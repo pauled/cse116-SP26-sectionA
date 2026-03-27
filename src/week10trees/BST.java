@@ -1,13 +1,14 @@
 package week10trees;
 
 import week7polymorphism.Comparator;
+import week7polymorphism.IntIncreasing;
 
 public class BST<A> {
     private BTN<A> root;
     private Comparator<A> comparator;
 
-    public BST(BTN<A> root,Comparator<A> comparator){
-        this.root=root;
+    public BST(Comparator<A> comparator){
+        this.root=null;
         this.comparator=comparator;
     }
     public void insert(A value){
@@ -31,5 +32,12 @@ public class BST<A> {
                 this.insertHelper(node.right,value);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        BST<Integer> bst=new BST<>(new IntIncreasing());
+        bst.insert(5);
+        bst.insert(2);
+        bst.insert(3);
     }
 }
