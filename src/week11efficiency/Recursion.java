@@ -29,8 +29,17 @@ public class Recursion {
         nums[1]=6;
         nums[2]=9;
         int total1=addToSpotRegRec(nums,3);
-        int total2=addToSpotTailec(nums,3);
+        int total2=addToSpotTailec(nums,2);
         System.out.println(total1);
         System.out.println(total2);
     }
 }
+
+
+
+
+
+
+
+
+
