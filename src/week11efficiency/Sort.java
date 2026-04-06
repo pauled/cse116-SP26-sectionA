@@ -132,7 +132,7 @@ public class Sort {
             out[x]=list1[x];
         }
         for (int x=0;x<list2.length;x++){
-            out[x+list1.length]=list1[x];
+            out[x+list1.length]=list2[x];
         }
         return out;
     }
@@ -173,7 +173,7 @@ public class Sort {
             timer.lap();
             System.out.println("Merge sort arrays size: "+size+" entries");
             timer.printTime();
-
+/*
             timer=new TimeMe();
             timer.start();
             int[] sorted2=bubbleSortDumb(randData2);
@@ -187,7 +187,7 @@ public class Sort {
             timer.lap();
             System.out.println("Bubble sort arrays size: "+size+" entries");
             timer.printTime();
-
+*/
             timer=new TimeMe();
             randData1=addLists(sorted1,tenEntries);
             timer.start();
@@ -197,7 +197,7 @@ public class Sort {
             timer.printTime();
 
             timer=new TimeMe();
-            randData2=addLists(sorted2,tenEntries);
+            randData2=addLists(sorted1,tenEntries);
             timer.start();
             int[] sorted5=bubbleSortDumb(randData2);
             timer.lap();
@@ -205,11 +205,19 @@ public class Sort {
             timer.printTime();
 
             timer=new TimeMe();
-            randData3=addLists(sorted3,tenEntries);
+            randData3=addLists(sorted1,tenEntries);
             timer.start();
-            int[] sorted6=bubbleSortDumb(randData3);
+            int[] sorted6=bubbleSort(randData3);
             timer.lap();
             System.out.println("Bubble sort arrays 10 new size: "+size+" entries");
+            timer.printTime();
+
+            timer=new TimeMe();
+            randData3=addLists(tenEntries,sorted1);
+            timer.start();
+            int[] sorted7=bubbleSort(randData3);
+            timer.lap();
+            System.out.println("Bubble sort arrays 10 new size front: "+size+" entries");
             timer.printTime();
         }
     }
