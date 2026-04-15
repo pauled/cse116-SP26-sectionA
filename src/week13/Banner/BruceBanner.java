@@ -18,6 +18,9 @@ public class BruceBanner {
     public void fight(){
         this.state.fight();
     }
+    public void learnControl(){
+        setState(new ProfHulk(this));
+    }
 
     public static void main(String[] args) {
         BruceBanner bruce=new BruceBanner();
